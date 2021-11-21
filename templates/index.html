@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<title>Agrohack</title>
+	</head>
+
+	<body>
+		<div class="background"><img src="/static/spinner.gif" class="spinner"></div>
+		<div class="header">Построение оптимизированного маршрута движения автономного
+		трактора в поле</div>
+		<div class="title_image">Изображение карты</div>
+		<div class="Image_map"><img src="/static/logo.png"></div>
+		<div class="Block_Info">
+			<form action="/upload">
+				<div class="Input_Title_external">Габариты техники</div>
+				<input class="input" type="number" placeholder="Ширина, Мм">
+				<input class="input" type="number" placeholder="Длина, Мм">
+				<input class="input" type="number" placeholder="Колёсная база, Мм">
+				<div class="accordion">Указать параметры</div>
+				<div class="panel">
+				<div class="Input_Title">Ширина агрегата-опрыскиватель</div>
+				<input class="input" type="number" placeholder="Ширина, М">
+				<div class="Input_Title">Ширина агрегата-сеялка</div>
+				<input class="input" type="number" placeholder="Ширина, М">
+				<div class="Input_Title">Количество секций-опрыскиватель</div>
+				<input class="input" type="number" placeholder="Количество, Шт">
+				<div class="Input_Title">Количество секций-сеялка</div>
+				<input class="input" type="number" placeholder="Количество, Шт">
+				<div class="Input_Title">Кратность агрегата</div>
+				<input class="input" type="number" placeholder="Крастность,См">
+				<div class="Input_Title">Ширина для стыковки в ряды посева</div>
+				<input class="input" type="number" placeholder="Ширина, М">
+				</div>
+				<div class="Input_Subitle">Выбор операции на поле:</div>
+				<input type="radio" class="radio" name="operation" id="spraying" />
+			  	<label class="operation_label" for="spraying">Опрыскивание</label>
+			  	<p>
+			  	<input type="radio" class="radio" name="operation" id="North" />
+			  	<label class="operation_label" for="North">Сев</label>
+			  	</p>
+			  	<div class="Input_Title">Загрузите контур поля</div>
+				<input type="file" id="File" class="hiden_input">
+				<label for="File" class="input_label"><img src="/static/Vector.svg">Загрузите файл shp — WGS84</label>
+				<div class="route">Построить Маршрут</div>
+			</form>
+		</div>
+
+		<div class="file_title">Готовые файлы</div>
+		<a class="download_files" href="#" download="Vector.svg" >Загрузить Файл 2<img class="line" src="/static/Line.svg"> <img src="/static/Vector_green.svg" class="download_files_img">.shp/.shx</a>
+
+		<a class="download_files" href="/static/Vector.svg" download="Vector.svg" target="_blank">Загрузить Файл 1<img class="line" src="/static/Line.svg"> <img src="/static/Vector_green.svg" class="download_files_img">.shp/.shx</a>
+
+		<div class="spacer"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="/static/agrohack.js"></script>
+		<script src="/static/accordion.js"></script>
+	</body>
+</html>
+
+<!-- by InfantemTeam, 2021
+     infantemteam@sdore.me -->

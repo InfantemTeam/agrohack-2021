@@ -1,0 +1,10 @@
+venv/
+.venv/
+.DS_Store
+**.sqlite
+**.db
+**.log
+**.old
+**.bak
+**__pycache__
+**_config.py
